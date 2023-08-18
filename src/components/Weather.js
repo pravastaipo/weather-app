@@ -22,7 +22,7 @@ const Weather = () => {
   const handleClick = async () => {
     if (name !== '') {
       try {
-        const res = await Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=c2395c4215ca0b9df1ce35f289097623`);
+        const res = await Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=5c4215ca0b9df1ce35f289097623`);
         const weatherData = res.data;
         let imagePath;
     
