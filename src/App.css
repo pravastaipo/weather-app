@@ -1,38 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+  --primary-clr: #61dafb;
+  --secondary-clr: #282c34;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--secondary-clr);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.navbar {
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  border-bottom: 1px solid var(--primary-clr);
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.title {
+  padding: 0 10px;
+  text-align: center;
+}
+
+.title h2 {
+  color: #fff;
+  line-height: 1;
+}
+
+.title p {
+  color: var(--primary-clr);
+  line-height: 1;
+}
+
+.weather__card {
+  border: 1px solid #61dafb;
+  border-right: 1px solid #61dafb;
+  width: 280px;
+  height: 390px;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 3px 1px 20px #61dafb81;
+  position: relative;
+}
+
+.search__section {
+  display: flex;
+}
+.location__input {
+  background: none;
+  color: #fff;
+  padding: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 220px;
+  outline: none;
+  border: none;
+}
+
+.location__input::placeholder {
+  text-transform: capitalize;
+}
+
+.search__btn {
+  cursor: pointer;
+}
+
+.weather__section {
+  margin-top: 30px;
+}
+
+.weather__section img {
+  width: 190px;
+  line-height: 0;
+}
+
+.temperature {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 15px;
+  font-family: 'poppins';
+  color: #fff;
+  text-align: center;
+  font-size: 45px;
+  line-height: 1;
+
 }
 
-.App-link {
+.description {
   color: #61dafb;
+  font-family: 'poppins';
+  text-align: center;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.details__section {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  font-family: 'poppins';
+  margin-top: 20px;
+  position: absolute;
+  bottom: 30px;
+}
+
+.humidity,
+.wind {
+  display: flex;
+  gap: 5px;
+}
+
+.text {
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: 13px;
+  width: 75px;
+}
+
+.text span {
+  color: #fff;
+  font-size: 15px;
+}
+.text p {
+  color: #fff;
+  font-size: 12px;
+}
+
+footer {
+  display: grid;
+  place-content: center;
+  z-index: 10;
+  position: fixed;
+  backdrop-filter: blur(3px);
+  border-top: 1px solid var(--primary-clr);
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  padding: 7px 0;
+  text-align: center;
+  color: #fff;
+}
+
+footer p span {
+  color: var(--primary-clr);
 }
